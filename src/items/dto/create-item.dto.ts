@@ -4,8 +4,11 @@ export class CreateItemDto {
   @IsNotEmpty()
   name: string;
 
+  @IsNotEmpty()
+  surname: string;
+
   @IsNumber()
-  price: number;
+  age: number;
 
   @IsNotEmpty()
   description: string;

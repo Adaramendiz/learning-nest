@@ -5,14 +5,17 @@ export type ItemsDocument = HydratedDocument<Items>;
 
 @Schema()
 export class Items {
-  @Prop()
+  @Prop({ type: String, required: true })
   name: string;
 
-  @Prop()
+  @Prop({ type: String, required: true })
+  surname: string;
+
+  @Prop({ type: Number, required: true })
   age: number;
 
-  @Prop()
-  breed: string;
+  @Prop({ type: String, required: true })
+  description: string;
 }
 
 export const ItemsSchema = SchemaFactory.createForClass(Items);
